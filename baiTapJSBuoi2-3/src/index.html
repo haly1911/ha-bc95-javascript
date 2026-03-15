@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Exercise</title>
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body class="min-h-screen flex items-center justify-center">
+    <div class="flex justify-center items-center">
+      <!-- Sidebar -->
+      <div class="w-40 h-screen p-4 space-y-5 shadow-xl">
+        <button
+          onclick="showPage('bai1')"
+          data-page="bai1"
+          class="menu-btn block w-full text-center shadow-xl bg-[#F6F0D7] hover:bg-[#9CAB84] transition-colors duration-200 p-2 rounded cursor-pointer"
+        >
+          Bài 1
+        </button>
+        <button
+          onclick="showPage('bai2')"
+          data-page="bai2"
+          class="menu-btn block w-full text-center shadow-xl bg-[#F6F0D7] hover:bg-[#9CAB84] transition-colors duration-200 p-2 rounded cursor-pointer"
+        >
+          Bài 2
+        </button>
+        <button
+          onclick="showPage('bai3')"
+          data-page="bai3"
+          class="menu-btn block w-full text-center shadow-xl bg-[#F6F0D7] hover:bg-[#9CAB84] transition-colors duration-200 p-2 rounded cursor-pointer"
+        >
+          Bài 3
+        </button>
+        <button
+          onclick="showPage('bai4')"
+          data-page="bai4"
+          class="menu-btn block w-full text-center shadow-xl bg-[#F6F0D7] hover:bg-[#9CAB84] transition-colors duration-200 p-2 rounded cursor-pointer"
+        >
+          Bài 4
+        </button>
+        <button
+          onclick="showPage('bai5')"
+          data-page="bai5"
+          class="menu-btn block w-full text-center shadow-xl bg-[#F6F0D7] hover:bg-[#9CAB84] transition-colors duration-200 p-2 rounded cursor-pointer"
+        >
+          Bài 5
+        </button>
+      </div>
+      <!-- Content -->
+      <div class="min-h-screen flex-1 flex justify-center items-center bg-[#F6F0D7] p-5">
+        <!-- Bài 1 -->
+        <div id="bai1" class="page flex-1">
+          <h1 class="flex items-center gap-3 text-2xl font-bold p-5">
+            <svg width="1.5em" height="1.5em" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <rect x="24" y="18" width="16" height="6" rx="2" fill="#8B5E3C" />
+              <path d="M26 18C26 14 30 12 32 12C34 12 38 14 38 18H26Z" fill="#A47149" />
+              <ellipse cx="32" cy="40" rx="20" ry="18" fill="#D8A15D" />
+              <text x="32" y="46" text-anchor="middle" font-size="18" font-weight="bold" fill="#5C3A1E">$</text>
+            </svg>
+            Tính tiền lương nhân viên
+          </h1>
+          <div class="bg-gray-100 shadow-xl w-150 text-base/7 p-5 border-l-4 border-[#89986D] rounded">
+            <p class="font-semibold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-yellow-500 inline-block"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                />
+
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+              </svg>
+              Gợi ý:
+            </p>
+            <p>
+              Công thức: Lương = Lương 1 ngày * số ngày làm<br />
+              Kiến thức áp dụng:
+            </p>
+            <ul class="px-5 list-disc">
+              <li>Tìm tới thẻ và lấy giá trị</li>
+              <li>Tạo hàm cơ bản</li>
+              <li>Gắn sự kiện click cho button</li>
+              <li>Thay đổi nội dung cho thẻ</li>
+              <li>Xử lý load trang với button của form</li>
+            </ul>
+          </div>
+          <div class="my-6 flex items-center gap-7">
+            <p>Lương 1 ngày: <span class="font-semibold">100.000 VND</span></p>
+            <input id="dayOfWork" type="number" placeholder="Số ngày làm" class="px-6 py-3 border rounded-full" />
+          </div>
+          <button id="btn-salary" class="bg-[#9CAB84] px-6 py-3 rounded-full hover:bg-[#89986D] cursor-pointer">Tính lương</button>
+          <div class="h-12 my-4 p-3 bg-[#9CAB84] rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+            <span id="salaryResult"></span>
+          </div>
+        </div>
+        <!-- Bài 2 -->
+        <div id="bai2" class="page flex-1">
+          <h1 class="flex items-center gap-3 text-2xl font-bold p-5">
+            <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="4" width="18" height="4" rx="1" fill="currentColor" />
+              <rect x="5" y="10" width="16" height="4" rx="1" fill="currentColor" />
+              <rect x="3" y="16" width="18" height="4" rx="1" fill="currentColor" />
+            </svg>
+            Tính giá trị trung bình
+          </h1>
+          <div class="bg-gray-100 shadow-xl w-150 text-base/7 p-5 border-l-4 border-[#89986D] rounded">
+            <p class="font-semibold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-yellow-500 inline-block"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                />
+
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+              </svg>
+              Gợi ý:
+            </p>
+            <p>Kiến thức áp dụng:</p>
+            <ul class="px-5 list-disc">
+              <li>Tìm tới thẻ và lấy giá trị</li>
+              <li>Tạo hàm cơ bản</li>
+              <li>Gắn sự kiện click cho button</li>
+              <li>Thay đổi nội dung cho thẻ</li>
+              <li>Xử lý load trang với button của form</li>
+              <li>Xử lý ép kiểu dữ liệu</li>
+            </ul>
+          </div>
+          <div class="my-6 max-w-lg mx-auto grid grid-cols-3 gap-3">
+            <input id="number1" type="number" placeholder="Nhập số thứ 1" class="px-4 py-2 border rounded-full" />
+            <input id="number2" type="number" placeholder="Nhập số thứ 2" class="px-4 py-2 border rounded-full" />
+            <input id="number3" type="number" placeholder="Nhập số thứ 3" class="px-4 py-2 border rounded-full" />
+            <input id="number4" type="number" placeholder="Nhập số thứ 4" class="px-4 py-2 border rounded-full" />
+            <input id="number5" type="number" placeholder="Nhập số thứ 5" class="px-4 py-2 border rounded-full" />
+          </div>
+          <button id="btn-average" class="bg-[#9CAB84] px-6 py-3 rounded-full hover:bg-[#89986D] cursor-pointer">Tính trung bình</button>
+          <div class="h-12 my-4 p-3 bg-[#9CAB84] rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+            <span id="averageResult"></span>
+          </div>
+        </div>
+        <!-- Bài 3 -->
+        <div id="bai3" class="page flex-1">
+          <h1 class="text-2xl font-bold p-5 flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#60A5FA"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 7h14"></path>
+              <polyline points="13 4 17 7 13 10"></polyline>
+              <path d="M21 17H7"></path>
+              <polyline points="11 14 7 17 11 20"></polyline>
+            </svg>
+            Quy đổi tiền
+          </h1>
+          <div class="bg-gray-100 shadow-xl w-150 text-base/7 p-5 border-l-4 border-[#89986D] rounded">
+            <p class="font-semibold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-yellow-500 inline-block"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                />
+
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+              </svg>
+              Gợi ý:
+            </p>
+            <p>Kiến thức áp dụng:</p>
+            <ul class="px-5 list-disc">
+              <li>Áp dụng các kiến thức như bài 1 và 2</li>
+              <li>Giá USD mặc định 1 USD = 23500</li>
+              <li>
+                Có thể dùng thêm NumberFormat để số tiền hiển thị đẹp hơn:
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat">NumberFormat</a
+                ><br />
+                VD: new Intl.NumberFormat('vn-VN').format(23500); => 23,500
+              </li>
+            </ul>
+          </div>
+          <input id="dollarAmount" type="number" placeholder="Nhập số tiền USD" class="my-4 px-4 py-2 border rounded-full" /><br />
+          <button id="btn-exchange" class="bg-[#9CAB84] px-6 py-3 rounded-full hover:bg-[#89986D] cursor-pointer">Quy đổi tiền</button>
+          <div class="h-12 my-4 p-3 bg-[#9CAB84] rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+            <span id="exchangeResult"></span>
+          </div>
+        </div>
+        <!-- Bài 4 -->
+        <div id="bai4" class="page flex-1">
+          <h1 class="text-2xl font-bold p-5 flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.5em"
+              height="1.5em"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#8B5A2B"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g transform="rotate(45 12 12)">
+                <rect x="4" y="9" width="16" height="6" rx="1"></rect>
+                <line x1="6" y1="9" x2="6" y2="11"></line>
+                <line x1="8" y1="9" x2="8" y2="12"></line>
+                <line x1="10" y1="9" x2="10" y2="11"></line>
+                <line x1="12" y1="9" x2="12" y2="12"></line>
+                <line x1="14" y1="9" x2="14" y2="11"></line>
+                <line x1="16" y1="9" x2="16" y2="12"></line>
+                <line x1="18" y1="9" x2="18" y2="11"></line>
+              </g>
+            </svg>
+            Tính diện tích, chu vi hình chữ nhật
+          </h1>
+          <div class="bg-gray-100 shadow-xl w-150 text-base/7 p-5 border-l-4 border-[#89986D] rounded">
+            <p class="font-semibold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-yellow-500 inline-block"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                />
+
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+              </svg>
+              Gợi ý:
+            </p>
+            <p>Kiến thức áp dụng:</p>
+            <ul class="px-5 list-disc">
+              <li>Áp dụng các kiến thức như các bài trước</li>
+              <li>Diện tích: dài x rộng</li>
+              <li>Chu vi: (dài + rộng) x 2</li>
+            </ul>
+          </div>
+          <div class="my-6 flex items-center gap-7">
+            <input id="length" type="number" placeholder="Nhập chiều dài" class="px-4 py-2 border rounded-full" />
+            <input id="width" type="number" placeholder="Nhập chiều rộng" class="px-4 py-2 border rounded-full" />
+          </div>
+          <button id="btn-rectangle" class="bg-[#9CAB84] w-30 px-6 py-3 rounded-full hover:bg-[#89986D] cursor-pointer">Tính</button>
+          <div class="h-12 my-4 p-3 bg-[#9CAB84] rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+            <span id="rectangleResult"></span>
+          </div>
+        </div>
+        <!-- Bài 5 -->
+        <div id="bai5" class="page flex-1">
+          <h1 class="text-2xl font-bold p-5 flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.5em"
+              height="1.5em"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#5C3A21"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <line x1="6" y1="5" x2="6" y2="19"></line>
+              <line x1="10" y1="5" x2="10" y2="19"></line>
+              <line x1="14" y1="5" x2="14" y2="19"></line>
+              <line x1="18" y1="5" x2="18" y2="19"></line>
+              <circle cx="6" cy="9" r="1.4" fill="#ef4444" stroke="none"></circle>
+              <circle cx="6" cy="15" r="1.4" fill="#ef4444" stroke="none"></circle>
+              <circle cx="10" cy="11" r="1.4" fill="#f59e0b" stroke="none"></circle>
+              <circle cx="10" cy="15" r="1.4" fill="#f59e0b" stroke="none"></circle>
+              <circle cx="14" cy="9" r="1.4" fill="#22c55e" stroke="none"></circle>
+              <circle cx="14" cy="13" r="1.4" fill="#22c55e" stroke="none"></circle>
+              <circle cx="18" cy="11" r="1.4" fill="#3b82f6" stroke="none"></circle>
+              <circle cx="18" cy="15" r="1.4" fill="#3b82f6" stroke="none"></circle>
+            </svg>
+            Tính tổng 2 ký số
+          </h1>
+          <div class="bg-gray-100 shadow-xl w-150 text-base/7 p-5 border-l-4 border-[#89986D] rounded">
+            <p class="font-semibold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-yellow-500 inline-block"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                />
+
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+              </svg>
+              Gợi ý:
+            </p>
+            <p>Kiến thức áp dụng:</p>
+            <ul class="px-5 list-disc">
+              <li>Áp dụng cách tính như demo tổng 3 ký số trên lớp</li>
+            </ul>
+          </div>
+          <input id="input-number" type="number" placeholder="Nhập số có 2 chữ số" class="my-4 px-4 py-2 border rounded-full" /><br />
+          <button id="btn-calc" class="bg-[#9CAB84] px-6 py-3 rounded-full hover:bg-[#89986D] cursor-pointer">Tính tổng</button>
+          <div class="h-12 my-4 p-3 bg-[#9CAB84] rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+            <span id="calcResult"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
