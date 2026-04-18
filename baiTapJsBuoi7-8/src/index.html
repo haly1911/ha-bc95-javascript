@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Exercise</title>
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body class="relative flex justify-center min-h-screen">
+    <img
+      src="./img/green-background-mobile.jpg"
+      alt="green-background"
+      class="fixed top-0 left-0 w-full h-screen object-fill opacity-80 lg:hidden"
+    />
+    <img
+      src="./img/green-background.jpg"
+      alt="green-background"
+      class="fixed top-0 left-0 w-full h-screen object-fill opacity-80 hidden lg:block"
+    />
+    <div class="absolute w-4/5 sm:w-2/3 max-w-7xl mx-auto p-4 sm:p-10 lg:p-16 bg-[#ffffffaa] min-h-full shadow-2xl">
+      <section id="input-area" class="mt-12 sm:mt-0">
+        <div class="flex flex-col gap-4">
+          <input type="number" id="input" placeholder="Nhập số n" class="input-box sm:w-2/3" />
+          <p class="hidden text-sm text-red-500"></p>
+          <div class="flex flex-wrap sm:flex-nowrap gap-4">
+            <button id="add-btn" class="calc-btn">Thêm số</button>
+            <button id="del-btn" class="calc-btn">Xoá số</button>
+          </div>
+        </div>
+        <div class="result-box">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 inline-block"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 1l7 7-7 7" />
+          </svg>
+          <span id="input-result"></span>
+        </div>
+      </section>
+      <section id="content-area" class="bg-white rounded-lg mt-10 border border-olive-400 divide-y divide-olive-400">
+        <!-- bài 1 -->
+        <div>
+          <div id="bai1-title" class="title rounded-t-lg">
+            <p class="num-icon">1</p>
+            <h3 class="mr-auto">Tổng số dương</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="title-arrow duration-500 w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div id="bai1-content" class="expand-content">
+            <div class="content-wrapper">
+              <div class="hint-box mx-auto">
+                <p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-yellow-500 inline-block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                    />
+
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+                  </svg>
+                  <span class="font-semibold">Gợi ý:</span>
+                  Làm tương tự demo đã học trên lớp
+                </p>
+              </div>
+              <button id="sum-btn" class="calc-btn mt-4 sm:mt-6">Tính tổng</button>
+              <div class="result-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 1l7 7-7 7" />
+                </svg>
+                <span id="sum-result"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- bài 2 -->
+        <div>
+          <div id="bai2-title" class="title">
+            <p class="num-icon">2</p>
+            <h3 class="mr-auto">Đếm số dương</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="title-arrow duration-500 w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div id="bai2-content" class="expand-content">
+            <div class="content-wrapper">
+              <div class="hint-box mx-auto">
+                <p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-yellow-500 inline-block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                    />
+
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+                  </svg>
+                  <span class="font-semibold">Gợi ý:</span>
+                  Làm tương tự demo đã học trên lớp
+                </p>
+              </div>
+              <button id="count-btn" class="calc-btn mt-4 sm:mt-6">Đếm số</button>
+              <div class="result-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 1l7 7-7 7" />
+                </svg>
+                <span id="count-result"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- bài 3 -->
+        <div>
+          <div id="bai3-title" class="title">
+            <p class="num-icon">3</p>
+            <h3 class="mr-auto">Tìm số nhỏ nhất</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="title-arrow duration-500 w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div id="bai3-content" class="expand-content">
+            <div class="content-wrapper">
+              <div class="hint-box mx-auto">
+                <p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-yellow-500 inline-block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                    />
+
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+                  </svg>
+                  <span class="font-semibold">Gợi ý:</span>
+                  Làm tương tự demo Sinh Vien đã học trên lớp
+                </p>
+              </div>
+              <button id="min-btn" class="calc-btn mt-4 sm:mt-6">Tìm số nhỏ nhất</button>
+              <div class="result-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 1l7 7-7 7" />
+                </svg>
+                <span id="min-result"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- bài 4 -->
+        <div>
+          <div id="bai4-title" class="title">
+            <p class="num-icon">4</p>
+            <h3 class="mr-auto">Tìm số dương nhỏ nhất</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="title-arrow duration-500 w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div id="bai4-content" class="expand-content">
+            <div class="content-wrapper">
+              <div class="hint-box mx-auto">
+                <p class="font-semibold">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-yellow-500 inline-block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                    />
+
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+                  </svg>
+                  Gợi ý:
+                </p>
+                <button class="expand-btn">
+                  <svg class="expand-arrow duration-300" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                    <polygon points="0,0 0,10 8.66,5" fill="#000" />
+                  </svg>
+                  <span>Mở rộng để xem thêm</span>
+                </button>
+                <ul class="expand-hint">
+                  <li>Tạo thêm 1 mảng mới dùng để chứa các số dương</li>
+                  <li>Dùng vòng lặp để lấy các số dương từ mảng cũ và lưu vào trong mảng mới</li>
+                  <li>
+                    Kiểm tra mảng mới có phần tử hay không. Nếu có thì bắt đầu đi tìm giá trị dương nhỏ nhất. Ngược lại thì thông báo không
+                    có số dương
+                  </li>
+                </ul>
+              </div>
+              <button id="min-pos-btn" class="calc-btn mt-4 sm:mt-6">Tìm số dương nhỏ nhất</button>
+              <div class="result-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 1l7 7-7 7" />
+                </svg>
+                <span id="min-pos-result"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- bài 5 -->
+        <div>
+          <div id="bai5-title" class="title">
+            <p class="num-icon">5</p>
+            <h3 class="mr-auto">Tìm số chẵn cuối cùng</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="title-arrow duration-500 w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div id="bai5-content" class="expand-content">
+            <div class="content-wrapper">
+              <div class="hint-box mx-auto">
+                <p class="font-semibold">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-yellow-500 inline-block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                    />
+
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+                  </svg>
+                  Gợi ý:
+                </p>
+                <button class="expand-btn">
+                  <svg class="expand-arrow duration-300" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                    <polygon points="0,0 0,10 8.66,5" fill="#000" />
+                  </svg>
+                  <span>Mở rộng để xem thêm</span>
+                </button>
+                <ul class="expand-hint">
+                  <li>Tạo 1 biến chứa số chẵn cuối cùng</li>
+                  <li>Dùng vòng lặp duyệt mảng và kiểm tra số chẵn. Nếu là số chẵn thì gán vào biến</li>
+                </ul>
+              </div>
+              <button id="last-even-btn" class="calc-btn mt-4 sm:mt-6">Tìm số chẵn</button>
+              <div class="result-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 1l7 7-7 7" />
+                </svg>
+                <span id="last-even-result"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- bài 6 -->
+        <div>
+          <div id="bai6-title" class="title">
+            <p class="num-icon">6</p>
+            <h3 class="mr-auto">Đổi chỗ</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="title-arrow duration-500 w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div id="bai6-content" class="expand-content">
+            <div class="content-wrapper">
+              <div class="hint-box mx-auto">
+                <p class="font-semibold">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-yellow-500 inline-block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                    />
+
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+                  </svg>
+                  Gợi ý:
+                </p>
+                <button class="expand-btn">
+                  <svg class="expand-arrow duration-300" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                    <polygon points="0,0 0,10 8.66,5" fill="#000" />
+                  </svg>
+                  <span>Mở rộng để xem thêm</span>
+                </button>
+                <ul class="expand-hint">
+                  <li>
+                    Vị trí là index của phần tử trong mảng<br />
+                    Để gán giá trị vào 1 vị trí(index) trong mảng => array[index] = giá trị;
+                  </li>
+                  <li>Tạo 1 biến tạm, gán giá trị của phần tử ở vị trí 1 vào biến tạm</li>
+                  <li>Gán giá trị của phần tử ở vị trí 2 vào vị trí 1</li>
+                  <li>Gán giá trị biến tạm vào vị trí 2</li>
+                </ul>
+              </div>
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-6">
+                <input type="number" id="index-1" placeholder="Nhập số vị trí 1" class="input-box" />
+                <input type="number" id="index-2" placeholder="Nhập số vị trí 2" class="input-box" />
+                <p class="hidden text-sm text-red-500"></p>
+              </div>
+              <button id="swap-btn" class="calc-btn mt-4 sm:mt-6">Đổi chỗ</button>
+              <div class="result-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 1l7 7-7 7" />
+                </svg>
+                <span id="swap-result"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- bài 7 -->
+        <div>
+          <div id="bai7-title" class="title">
+            <p class="num-icon">7</p>
+            <h3 class="mr-auto">Sắp xếp tăng dần</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="title-arrow duration-500 w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div id="bai7-content" class="expand-content">
+            <div class="content-wrapper">
+              <div class="hint-box mx-auto">
+                <p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-yellow-500 inline-block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                    />
+
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+                  </svg>
+                  <span class="font-semibold">Gợi ý:</span>
+                  Làm tương tự demo Sinh Vien đã học trên lớp
+                </p>
+              </div>
+              <button id="sort-btn" class="calc-btn mt-4 sm:mt-6">Sắp xếp</button>
+              <div class="result-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 1l7 7-7 7" />
+                </svg>
+                <span id="sort-result"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- bài 8 -->
+        <div>
+          <div id="bai8-title" class="title">
+            <p class="num-icon">8</p>
+            <h3 class="mr-auto">Tìm số nguyên tố đầu tiên</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="title-arrow duration-500 w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div id="bai8-content" class="expand-content">
+            <div class="content-wrapper">
+              <div class="hint-box mx-auto">
+                <p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-yellow-500 inline-block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                    />
+
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+                  </svg>
+                  <span class="font-semibold pr-1">Gợi ý:</span>
+                  Khi tìm thấy số nguyên tố đầu tiên thì dùng lệnh dừng vòng lặp (break) để không duyệt những số tiếp theo trong mảng
+                </p>
+              </div>
+              <button id="first-prime-btn" class="calc-btn mt-4 sm:mt-6">Tìm số nguyên tố</button>
+              <div class="result-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 1l7 7-7 7" />
+                </svg>
+                <span id="first-prime-result"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- bài 9 -->
+        <div>
+          <div id="bai9-title" class="title">
+            <p class="num-icon">9</p>
+            <h3 class="mr-auto">Đếm số nguyên</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="title-arrow duration-500 w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div id="bai9-content" class="expand-content">
+            <div class="content-wrapper">
+              <div class="hint-box mx-auto">
+                <p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-yellow-500 inline-block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                    />
+
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+                  </svg>
+                  <span class="font-semibold pr-1">Gợi ý:</span>
+                  Sử dụng
+                  <a href="https://www.w3schools.com/jsref/jsref_isinteger.asp" class="text-blue-700 underline">Number.isInteger</a>
+                  để kiểm tra số nguyên
+                </p>
+              </div>
+              <div class="mt-6">
+                <div class="flex flex-col gap-4">
+                  <input type="number" id="float-input" placeholder="Nhập thêm số" class="input-box sm:w-2/3" />
+                  <p class="hidden text-sm text-red-500"></p>
+                  <div class="flex flex-wrap sm:flex-nowrap gap-4">
+                    <button id="float-add-btn" class="calc-btn">Thêm số</button>
+                    <button id="float-del-btn" class="calc-btn">Xoá số</button>
+                  </div>
+                </div>
+                <div class="result-box">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5 inline-block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 1l7 7-7 7" />
+                  </svg>
+                  <span id="float-input-result"></span>
+                </div>
+              </div>
+              <button id="int-count-btn" class="calc-btn mt-4 sm:mt-6">Đếm số nguyên</button>
+              <div class="result-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 1l7 7-7 7" />
+                </svg>
+                <span id="int-count-result"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- bài 10 -->
+        <div>
+          <div id="bai10-title" class="title">
+            <p class="num-icon">10</p>
+            <h3 class="mr-auto">So sánh số lượng số âm và dương</h3>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="title-arrow duration-500 w-5 h-5 inline-block"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <div id="bai10-content" class="expand-content">
+            <div class="content-wrapper">
+              <div class="hint-box mx-auto">
+                <p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6 text-yellow-500 inline-block"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 3a7 7 0 00-4 12c.5.4 1 1.2 1 2h6c0-.8.5-1.6 1-2a7 7 0 00-4-12z"
+                    />
+
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 21h6M10 18h4" />
+                  </svg>
+                  <span class="font-semibold pr-1">Gợi ý:</span>
+                  Đếm số lượng sô âm và số dương. Sau đó so sánh số lượng của 2 loại
+                </p>
+              </div>
+              <button id="compare-btn" class="calc-btn mt-4 sm:mt-6">So sánh</button>
+              <div class="result-box">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 inline-block"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 1l7 7-7 7" />
+                </svg>
+                <span id="compare-result"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

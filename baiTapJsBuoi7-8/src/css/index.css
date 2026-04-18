@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer components {
+  .calc-btn {
+    @apply text-white bg-[#9CAB84] px-9 sm:px-12 py-3 w-full sm:w-fit rounded-full hover:bg-[#89986D] hover:scale-98 cursor-pointer duration-300;
+  }
+  .input-box {
+    @apply bg-olive-100 w-full px-9 py-3 outline-none rounded-full inset-shadow-sm;
+  }
+  .title {
+    @apply p-2 sm:p-3 lg:p-4 flex justify-between items-center gap-3 cursor-pointer duration-500;
+  }
+  .title.active {
+    @apply bg-[#9CAB84] text-white;
+  }
+  .title.active .num-icon {
+    @apply text-olive-500 bg-white font-semibold;
+  }
+  .content-wrapper {
+    @apply mx-auto p-4 sm:p-6 lg:p-8;
+  }
+  .expand-content {
+    @apply overflow-hidden max-h-0 transition-all duration-500;
+  }
+  .result-box {
+    @apply h-12 mt-4 sm:mt-6 p-3 bg-taupe-200 border border-taupe-300 rounded-full truncate;
+  }
+  .num-icon {
+    @apply text-center text-sm text-white w-6 h-6 bg-olive-400 rounded-md duration-500;
+  }
+  .hint-box {
+    @apply shadow-xl text-base sm:leading-7 p-5 border border-olive-200 border-l-4 border-l-[#89986D] rounded;
+  }
+  .expand-btn {
+    @apply flex items-center gap-2 cursor-pointer ml-2;
+  }
+  .expand-hint {
+    @apply list-disc ml-1.5 px-5 text-justify overflow-hidden max-h-0 transition-all duration-500;
+  }
+}
